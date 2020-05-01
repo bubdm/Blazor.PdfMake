@@ -12,7 +12,7 @@
     <Authors>Allan Mobley</Authors>
     <Copyright>© 2020 Mobsites</Copyright>
     <Description></Description>
-    <PackageId>Mobsites.Blazor.NameOfComponent</PackageId>
+    <PackageId>Mobsites.Blazor.PdfMake</PackageId>
     <IsPackable>true</IsPackable>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <PackageIcon>mobsites-logo.png</PackageIcon>
@@ -21,7 +21,7 @@
     <PackageTags>blazor;component;</PackageTags>
     <PackageProjectUrl>https://www.mobsites.com</PackageProjectUrl>
     <RepositoryType>git</RepositoryType>
-    <RepositoryUrl>https://github.com/Mobsites/Blazor.NameOfComponent</RepositoryUrl>
+    <RepositoryUrl>https://github.com/Mobsites/Blazor.PdfMake</RepositoryUrl>
   </PropertyGroup>
 
 
