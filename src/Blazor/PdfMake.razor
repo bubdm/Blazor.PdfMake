@@ -1,8 +1,10 @@
 @inherits StatefulComponent
 
-<CascadingValue Value="this">
-    @ChildContent
-</CascadingValue>
+<div style="display: none; visibility: hidden">
+    <CascadingValue Value="this">
+        @ChildContent
+    </CascadingValue>
+</div>
 
 @if (ShowViewer)
 {
@@ -41,7 +43,7 @@
                 <textarea @ref="ErrorMoreInfo" id="errorMoreInfo" hidden="true" readonly="readonly"></textarea>
             </div>
 
-            <footer>
+            <footer style="display: none;">
                 <button @ref="Previous" class="toolbarButton pageUp" title="Previous Page" id="previous"></button>
                 <button @ref="Next" class="toolbarButton pageDown" title="Next Page" id="next"></button>
 

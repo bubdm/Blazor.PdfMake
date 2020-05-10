@@ -3,16 +3,17 @@
 <h1>Blazor PDF Make</h1>
 <h2 class="pl-5">by <img src="_content/Shared/mobsites-logo.png" width="42" height="42" />obsites</h2>
 <br />
-
 <PdfMake ShowViewer>
     <PdfMakeBody>
         <PdfMakeImage Src="_content/Shared/blazor.png" Width="72"/>
         <PdfMakeParagraph>Hello world!</PdfMakeParagraph>
         <PdfMakeParagraph>It's Blazor PDF Make!</PdfMakeParagraph>
         <PdfMakeParagraph>
-            <PdfMakeSentence Italics="true">How about that!</PdfMakeSentence>
+            <PdfMakeSentence Italics="true">A declarative, client-side pdf generator and displayer!</PdfMakeSentence>
             <PdfMakeSentence Bold="true">Cool, eh?</PdfMakeSentence>
         </PdfMakeParagraph>
+        <PdfMakeImage Src="_content/Shared/code.png" Width="500" />
+        <PdfMakeParagraph></PdfMakeParagraph>
         <PdfMakeParagraph Bold=true>
             This demonstrates the use of this component without a dependency on any of our other components. 
             We, of course, recommend using this component in conjunction with our other components 
@@ -22,8 +23,9 @@
         </PdfMakeParagraph>
     </PdfMakeBody>
 </PdfMake>
-<br />
-@* <div class="row mb-3">
+
+@* <br />
+<div class="row mb-3">
     <div class="col col-sm-8 col-xl-4">
         <p>
             <b>

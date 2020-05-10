@@ -86,23 +86,26 @@ namespace Mobsites.Blazor
             }
             else
             {
-                this.ChildContent.Invoke(this.RenderTreeBuilder);
+                if (this.ChildContent != null)
+                {
+                    this.ChildContent.Invoke(this.RenderTreeBuilder);
 
-                var frames = this.RenderTreeBuilder.GetFrames();
+                    var frames = this.RenderTreeBuilder.GetFrames();
 
 #pragma warning disable
-                var text = FormatWhitespace(frames.Array[0].TextContent);
+                    var text = FormatWhitespace(frames.Array[0].TextContent);
 #pragma warning restore
 
-                this.Text.Add(new TextOptions
-                {
-                    Text = text,
-                    Font = this.Font,
-                    FontSize = this.FontSize,
-                    Italics = this.Italics,
-                    Bold = this.Bold
-                });
-            }
+                    this.Text.Add(new TextOptions
+                    {
+                        Text = text,
+                        Font = this.Font,
+                        FontSize = this.FontSize,
+                        Italics = this.Italics,
+                        Bold = this.Bold
+                    });
+                }
+            }  
 
             this.Text.Add(new TextOptions
             {

@@ -4,7 +4,7 @@
 
 by <a href="https://www.mobsites.com"><img align="center" src="./src/assets/mobsites-logo.png" width="36" height="36" style="padding-top: 20px;" />obsites</a>
 
-A Blazor UI component for creating and displaying a pdf.
+A Blazor UI component housing a declarative, client-side pdf generator and viewer.
 
 ## [Demo](https://pdfmake.mobsites.com)
 
