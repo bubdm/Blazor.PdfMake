@@ -1,4 +1,4 @@
-[![Build Status](https://dev.azure.com/Mobsites-US/Blazor%20Template/_apis/build/status/Build?branchName=master)](https://dev.azure.com/Mobsites-US/Blazor%20Template/_build/latest?definitionId=22&branchName=master)
+[![Build Status](https://dev.azure.com/Mobsites-US/Blazor%20PDF%20Make/_apis/build/status/Build?branchName=master)](https://dev.azure.com/Mobsites-US/Blazor%20PDF%20Make/_build/latest?definitionId=28&branchName=master)
 
 # Blazor PDF Make
 
