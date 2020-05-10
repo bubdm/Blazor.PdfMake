@@ -10,6 +10,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using BlazorServer.Data;
+using System.Net.Http;
 
 namespace BlazorServer
 {
@@ -29,6 +30,17 @@ namespace BlazorServer
             services.AddRazorPages();
             services.AddServerSideBlazor();
             services.AddSingleton<WeatherForecastService>();
+
+            // Setup HttpClient for server side in a client side compatible fashion
+            services.AddScoped<HttpClient>(s =>
+            {
+                // Creating the URI helper needs to wait until the JS Runtime is initialized, so defer it.
+                var uriHelper = s.GetRequiredService<NavigationManager>();
+                return new HttpClient
+                {
+                    BaseAddress = new Uri(uriHelper.BaseUri)
+                };
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -44,7 +56,7 @@ namespace BlazorServer
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
-
+            
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
